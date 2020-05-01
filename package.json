@@ -30,7 +30,9 @@
     "start": "npm run start-dev",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev",
     "start-prod": "npm run build && node express.js",
-    "test": "jest --watch --coverage --config=configs/jest.json"
+    "test": "jest --watch --coverage --config=configs/jest.json",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -75,7 +77,9 @@
     "react-easy-chart": "^1.0.0",
     "react-table": "^6.8.6",
     "react-tree-graph": "^3.2.0",
-    "react-vis-force": "^0.3.1"
+    "react-vis-force": "^0.3.1",
+    "snyk": "^1.316.1"
   },
-  "postcss": {}
+  "postcss": {},
+  "snyk": true
 }
